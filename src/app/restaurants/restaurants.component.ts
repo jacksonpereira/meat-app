@@ -7,13 +7,13 @@ import { RestaurantsService } from './restaurants.service';
   templateUrl: './restaurants.component.html'
 })
 export class RestaurantsComponent implements OnInit {
-  restaurant: Restaurant[];
+  restaurants: Restaurant[];
 
   constructor(private restaurantsService: RestaurantsService) { }
 
   ngOnInit() {
     this.restaurantsService.restaurants()
-      .subscribe(restaurant => this.restaurant = restaurant)
+      .subscribe(restaurants => this.restaurants = restaurants)
   }
 
 }
